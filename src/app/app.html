@@ -20,7 +20,7 @@
     <a>Login</a>
 </ng-template> -->
 
-<div *ngIf="block==1">
+<!-- <div *ngIf="block==1">
     <h2>Block 1</h2>
 </div>
 <div *ngIf="block==2">
@@ -31,7 +31,22 @@
 </div>
 <div *ngIf="block!=1 && block!=2 && block!=3">
     <h2>nothing here</h2>
+</div> -->
+
+
+<!-- <button (click)="update()">Update</button> -->
+
+<button (click)="changecolor('red')">Red</button>
+<button (click)="changecolor('blue')">Blue</button>
+<button (click)="changecolor('green')">Green</button>
+<button (click)="changecolor('yellow')">Yellow</button>
+<button (click)="changecolor('purple')">Purple</button>
+
+<div [ngSwitch]="color">
+<h1 *ngSwitchCase="'red'" style="background-color: red;">Red color</h1>
+<h1 *ngSwitchCase="'blue'" style="background-color: blue;">Blue color</h1>
+<h1 *ngSwitchCase="'green'" style="background-color: green;">Green Color</h1>
+<h1 *ngSwitchCase="'yellow'" style="background-color: yellow;">Yellow Color</h1>
+<h1 *ngSwitchCase="'purple'" style="background-color: purple;">Purple Color</h1>
+<h1 *ngSwitchDefault>Default Color</h1>
 </div>
-
-
-<button (click)="update()">Update</button>

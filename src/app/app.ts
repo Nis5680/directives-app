@@ -1,11 +1,11 @@
-import { NgFor, NgIf } from '@angular/common';
+import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { email } from '@angular/forms/signals';
 
 
 @Component({
   selector: 'app-root',
-  imports: [NgFor,NgIf],
+  imports: [NgFor,NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -32,9 +32,16 @@ export class App {
 
   //login=true;
 
-  block=0;
+  // block=0;
 
-  update(){
-    this.block=this.block+1;
+  // update(){
+  //   this.block=this.block+1;
+  // }
+
+  color="black";
+
+  changecolor(color:string){
+    this.color = color;
   }
+
 }
