@@ -1,6 +1,6 @@
 <h1>directives-app</h1>
 
-<ul>
+<!-- <ul>
     <li *ngFor="let x of students">{{x}}</li>
 </ul>
 
@@ -10,4 +10,12 @@
         {{x.age}},
         {{x.email}}
     </li>
-</ul>
+</ul> -->
+
+
+<div *ngIf="login; else bbb">
+    <a>Logout</a>
+</div>
+<ng-template #bbb>
+    <a>Login</a>
+</ng-template>
