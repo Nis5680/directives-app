@@ -13,9 +13,25 @@
 </ul> -->
 
 
-<div *ngIf="login; else bbb">
+<!-- <div *ngIf="login; else bbb">
     <a>Logout</a>
 </div>
 <ng-template #bbb>
     <a>Login</a>
-</ng-template>
+</ng-template> -->
+
+<div *ngIf="block==1">
+    <h2>Block 1</h2>
+</div>
+<div *ngIf="block==2">
+    <h2>Block 2</h2>
+</div>
+<div *ngIf="block==3">
+    <h2>Block 3</h2>
+</div>
+<div *ngIf="block!=1 && block!=2 && block!=3">
+    <h2>nothing here</h2>
+</div>
+
+
+<button (click)="update()">Update</button>

@@ -30,5 +30,11 @@ export class App {
   //   }
   // ]
 
-  login=true;
+  //login=true;
+
+  block=0;
+
+  update(){
+    this.block=this.block+1;
+  }
 }
