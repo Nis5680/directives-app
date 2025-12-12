@@ -1,11 +1,32 @@
+import { NgFor } from '@angular/common';
 import { Component, signal } from '@angular/core';
+import { email } from '@angular/forms/signals';
+
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [NgFor],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('directives-app');
+  students = ['John', 'Jane', 'Jim'];
+
+  studdentsData=[
+    {
+      name:'John',
+      age:20,
+      email:'john@gmail.com'
+    },
+    {
+      name:'Jane',
+      age:22,
+      email:'jane@gmail.com'
+    },
+    {
+      name:'Jim',
+      age:21,
+      email:'jim@gmail.com'
+    }
+  ]
 }

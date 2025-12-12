@@ -1,1 +1,13 @@
 <h1>directives-app</h1>
+
+<ul>
+    <li *ngFor="let x of students">{{x}}</li>
+</ul>
+
+<ul>
+    <li *ngFor="let x of studdentsData">
+        {{x.name}},
+        {{x.age}},
+        {{x.email}}
+    </li>
+</ul>
